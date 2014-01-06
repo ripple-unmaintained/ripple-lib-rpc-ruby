@@ -28,10 +28,18 @@ And then execute:
       )
 
     # Send XRP
-    tx_hash = ripple.send_basic_transaction("rfGKu3tSxwMFZ5mQ6bUcxWrxahACxABqKc", "XRP", "1")
+    tx_hash = ripple.send_basic_transaction(
+      destination: "rfGKu3tSxwMFZ5mQ6bUcxWrxahACxABqKc",
+      currency: "XRP", 
+      amount: "1" 
+    )
 
     # Send IOU
-    tx_hash = ripple.send_basic_transaction("rfGKu3tSxwMFZ5mQ6bUcxWrxahACxABqKc", "USD", "1")
+    tx_hash = ripple.send_basic_transaction(
+      destination: "rfGKu3tSxwMFZ5mQ6bUcxWrxahACxABqKc",
+      currency: "USD",
+      amount: "1"
+    )
 
     # XRP Balance
     balance = ripple.xrp_balance
